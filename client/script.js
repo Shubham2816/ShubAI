@@ -2,6 +2,7 @@ import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 //import of bot and user while communicate
 
+
 const form = document.querySelector('form')
 // not using react so need to import everything
 const chatContainer = document.querySelector('#chat_container')
@@ -94,7 +95,7 @@ const handleSubmit = async (e) => {
     loader(messageDiv)
 
     //fetch data from server-> bot's response
-    const response = await fetch('https://shubh.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
